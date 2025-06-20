@@ -5,7 +5,8 @@ import tempfile
 import cv2
 
 # Load the YOLOv8 model
-model = YOLO('best.pt')
+model = YOLO("C:/Users/dell/Desktop/astro_guard/AstroGuard/runs/detect/train5/weights/best.pt")
+
 
 # Streamlit UI
 st.set_page_config(page_title="AstroGuard 🚀", layout="centered")
@@ -22,4 +23,5 @@ if uploaded_file is not None:
         temp_path = temp_file.name
 
     # Perform prediction
-    results = model.predict(temp_path, conf=0.5)_
+    results = model.predict(temp_path, conf=0.5)
+    
