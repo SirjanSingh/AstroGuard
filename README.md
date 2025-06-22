@@ -1,6 +1,6 @@
 # 🚀 Space Station Object Detector
 
-**Team:** CodeClash  
+**Team:** Ctrl+Alt+Elite  
 **Members:** Ritigya Gupta, Sirjan Singh, Manasvi Methi, Heeral Mandolia  
 **Hackathon:** Duality AI - Space Station Hackathon  
 **Theme:** Object Detection in Simulated Space Environments
@@ -30,6 +30,11 @@ We built our detection pipeline using **YOLOv8** and focused on the following ob
 ## ⚙️ Model Development Process
 
 We went through several iterations to find the most optimal configuration for both accuracy and generalization:
+
+### 1. **YOLOv8s (Small) - 30 Epochs** 
+- Initial training run
+- Achieved high accuracy
+- **mAP@0.5**: 93.2% | **Precision**: 92.7% | **Recall**: 91.2%
 
 ### 1. **YOLOv8s (Small) – 40 Epochs**
 - Initial successful training run
