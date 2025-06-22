@@ -34,12 +34,12 @@ We went through several iterations to find the most optimal configuration for bo
 ### 1. **YOLOv8s (Small) - 30 Epochs** 
 - Initial training run
 - Achieved high accuracy
-- **mAP@0.5**: 93.2% | **Precision**: 92.7% | **Recall**: 91.2%
+
 
 ### 1. **YOLOv8s (Small) – 40 Epochs**
 - Initial successful training run
 - Fast inference and high accuracy
-- **mAP@0.5**: 94.6% | **Precision**: 98.7% | **Recall**: 91.2%
+
 
 ### 2. **YOLOv8m (Medium) – 50 Epochs**
 - Improved training metrics (lower loss, higher precision)
