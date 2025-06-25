@@ -70,24 +70,26 @@ We went through several iterations to find the most optimal configuration for bo
 
 Tested on 400 unseen images:
 
-| Metric             | Value     |
-|--------------------|-----------|
-| **mAP@0.5**        | 87.9%     |
-| **mAP@0.5:0.95**   | 88.9%     |
-| **Precision**      | 98.7%     |
-| **Recall**         | 91.2%     |
-| **Inference Time** | ~11 ms/image |
+| Metric                            | Value             |
+| --------------------------------- | ----------------- |
+| **mAP\@0.5**                      | **87.9%**         |
+| **mAP\@0.5:0.95**                 | **78.1%**         |
+| **Precision (P)**                 | **95.0%**         |
+| **Recall (R)**                    | **79.7%**         |
+| **Inference Time**                | **5.8 ms/image**  |
+| **Preprocess + Postprocess Time** | **0.6ms + 2.6ms** |
+
 
 ---
 
 ## 📈 Class-Wise Performance
 
-| Class             | AP@0.5 |
-|-------------------|--------|
-| Fire Extinguisher | 0.975  |
-| Toolbox           | 0.937  |
-| Oxygen Tank       | 0.944  |
-| **Overall mAP**   | **0.952** |
+| Class             | Precision (P) | Recall (R) | mAP\@0.5 | mAP\@0.5:0.95 |
+| ----------------- | ------------- | ---------- | -------- | ------------- |
+| Fire Extinguisher | 95.9%         | 82.0%      | 88.9%    | 76.7%         |
+| Toolbox           | 95.0%         | 79.3%      | 87.7%    | 80.4%         |
+| Oxygen Tank       | 94.1%         | 77.7%      | 87.1%    | 77.1%         |
+
 
 - 🔍 Confusion Matrix showed minor confusion with background (typical for cluttered space scenes)  
 - 📈 F1-Confidence Curve peaked at confidence ≈ **0.598** (recommended threshold)
