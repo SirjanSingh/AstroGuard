@@ -4,6 +4,7 @@
 **Members:** Ritigya Gupta, Sirjan Singh, Manasvi Methi, Heeral Mandolia  
 **Hackathon:** Duality AI - Space Station Hackathon  
 **Theme:** Object Detection in Simulated Space Environments
+
 ---
 
 ## 🧩 Problem Statement
@@ -21,9 +22,10 @@ Develop a **fast, lightweight, and accurate object detection model** capable of 
 ## 🧠 Approach
 
 We built our detection pipeline using **YOLOv8** and focused on the following object classes:
-- 🧯 Fire Extinguisher
-- 🧰 Toolbox
-- 🛢️ Oxygen Tank
+
+- 🧯 Fire Extinguisher  
+- 🧰 Toolbox  
+- 🛢️ Oxygen Tank  
 
 ---
 
@@ -31,24 +33,36 @@ We built our detection pipeline using **YOLOv8** and focused on the following ob
 
 We went through several iterations to find the most optimal configuration for both accuracy and generalization:
 
-### 1. **YOLOv8s (Small) - 30 Epochs** 
-- Initial training run
-- Achieved high accuracy
+### 1. ✅ YOLOv8s (Small) – 40 Epochs (Best Model)
+- Best model with balanced performance  
+- Fast inference and high accuracy  
+- Chosen as the final model for submission
 
-
-### 1. **YOLOv8s (Small) – 40 Epochs**
-- Initial successful training run
-- Fast inference and high accuracy
-
-
-### 2. **YOLOv8m (Medium) – 50 Epochs**
-- Improved training metrics (lower loss, higher precision)
+### 2. YOLOv8m (Medium) – 50 Epochs
+- Improved training metrics (lower loss, higher precision)  
 - **But**: Test performance began to fluctuate (overfitting symptoms)
 
-### 3. ✅ **YOLOv8s – 50 Epochs (Final Model)**
-- Balanced performance across training and testing
-- No overfitting observed
-- Chosen as the **final model** for submission
+### 3.  YOLOv8s – 50 Epochs (`train10`)
+- Stable metrics  
+- Comparable to final model but slightly heavier
+
+### 4.  YOLOv8m – 50 Epochs (`train7`)
+- More complex model  
+- Slight overfitting observed
+
+---
+
+## 📊 Training Comparison Summary
+
+| Model          | Epochs | Type | Overall | FireExt. | ToolBox | OxyTank |
+|----------------|--------|------|---------|----------|---------|---------|
+| `train5`       | 40     | s    | 87.9    | 76.7     | 80.43   | 77.12   |
+| `train4`       | ?      | s    | 86.75   | 75.51    | 81.24   | 76.03   |
+| `train10`      | 50     | s    | 86.68   | 76.07    | 81.34   | 76.18   |
+| `train7`       | 50     | m    | 86.68   | 76.07    | 81.34   | 76.18   |
+| `train_5epochs`| 5      | s    | 71.79   | 62.77    | 60.51   | 48.96   |
+
+📌 Based on overall performance and generalization, **`train5` (YOLOv8s – 40 Epochs)** was selected as the **final model**.
 
 ---
 
@@ -56,13 +70,13 @@ We went through several iterations to find the most optimal configuration for bo
 
 Tested on 400 unseen images:
 
-| Metric         | Value     |
-|----------------|-----------|
-| **mAP@0.5**     | 94.6%     |
-| **mAP@0.5:0.95**| 88.9%     |
-| **Precision**   | 98.7%     |
-| **Recall**      | 91.2%     |
-| **Inference**   | ~11ms/img |
+| Metric             | Value     |
+|--------------------|-----------|
+| **mAP@0.5**        | 94.6%     |
+| **mAP@0.5:0.95**   | 88.9%     |
+| **Precision**      | 98.7%     |
+| **Recall**         | 91.2%     |
+| **Inference Time** | ~11 ms/image |
 
 ---
 
@@ -75,26 +89,47 @@ Tested on 400 unseen images:
 | Oxygen Tank       | 0.944  |
 | **Overall mAP**   | **0.952** |
 
-- **Confusion Matrix** showed minor confusion with background (typical for cluttered space scenes)
-- **F1-Confidence Curve** peaked at confidence ≈ 0.598 (suggested threshold)
+- 🔍 Confusion Matrix showed minor confusion with background (typical for cluttered space scenes)  
+- 📈 F1-Confidence Curve peaked at confidence ≈ **0.598** (recommended threshold)
 
 ---
 
 ## 🔍 Dataset Summary
 
-- Structured in YOLO format (`.txt` labels)
-- Verified 100% consistency between images and labels
+- Structured in YOLO format (`.txt` labels)  
+- Verified 100% consistency between images and labels  
 - Simulated dataset with realistic lighting, positioning, and occlusions inside a space station
 
 ---
 
 ## 🛠️ Tech Stack
 
-
-- **YOLOv8** (Ultralytics)
-- **Python**
-- **OpenCV** – image processing
-- **PyYAML** – configuration handling
-- **Tkinter** – GUI integration for predictions
+- **YOLOv8** (Ultralytics)  
+- **Python**  
+- **OpenCV** – Image processing  
+- **PyYAML** – Configuration handling  
+- **Tkinter** – GUI for model predictions  
 - **Google Colab** – GPU training on Tesla T4
+
 ---
+
+## ▶️ How to Run the Project
+
+### 🌐 Run Streamlit App
+
+bash
+streamlit run app.py
+
+### 🖼️ Run Tkinter GUI
+cd tkinter
+python app.py
+
+---
+# 📷 Screenshots
+This section will contain all the screenshots and visual outputs of our application
+![image](https://github.com/user-attachments/assets/aa0109b1-6752-427b-a565-392da22e1b23)
+![image](https://github.com/user-attachments/assets/8827521f-adc5-4a7c-abc5-0b56f6b08c28)
+![image](https://github.com/user-attachments/assets/f5ad1346-9a35-4c74-85b6-41d4226a9173)
+
+
+
