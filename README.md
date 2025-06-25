@@ -126,7 +126,9 @@ python app.py
 
 ---
 # 📷 Screenshots
-This section will contain all the screenshots and visual outputs of our application
+This section contains all the screenshots and visual outputs of our application
+
+
 ![image](https://github.com/user-attachments/assets/aa0109b1-6752-427b-a565-392da22e1b23)
 ![image](https://github.com/user-attachments/assets/8827521f-adc5-4a7c-abc5-0b56f6b08c28)
 ![image](https://github.com/user-attachments/assets/f5ad1346-9a35-4c74-85b6-41d4226a9173)
