@@ -1,4 +1,4 @@
-# 🚀 Space Station Object Detector
+#  Space Station Object Detector
 
 **Team:** Ctrl+Alt+Elite  
 **Members:** Ritigya Gupta, Sirjan Singh, Manasvi Methi, Heeral Mandolia  
@@ -7,19 +7,19 @@
 
 ---
 
-## 🧩 Problem Statement
+##  Problem Statement
 
 In the high-risk environment of a space station, it’s crucial to detect essential tools like fire extinguishers, oxygen tanks, and toolboxes in real time to ensure crew safety and mission efficiency.
 
 ---
 
-## 🎯 Objective
+##  Objective
 
 Develop a **fast, lightweight, and accurate object detection model** capable of identifying critical equipment from space station surveillance feeds.
 
 ---
 
-## 🧠 Approach
+##  Approach
 
 We built our detection pipeline using **YOLOv8** and focused on the following object classes:
 
@@ -29,11 +29,11 @@ We built our detection pipeline using **YOLOv8** and focused on the following ob
 
 ---
 
-## ⚙️ Model Development Process
+##  Model Development Process
 
 We went through several iterations to find the most optimal configuration for both accuracy and generalization:
 
-### 1. ✅ YOLOv8s (Small) – 40 Epochs (Best Model)
+### 1.  YOLOv8s (Small) – 40 Epochs (Best Model)
 - Best model with balanced performance  
 - Fast inference and high accuracy  
 - Chosen as the final model for submission
@@ -52,7 +52,7 @@ We went through several iterations to find the most optimal configuration for bo
 
 ---
 
-## 📊 Training Comparison Summary
+##  Training Comparison Summary
 
 | Model          | Epochs | Type | Overall | FireExt. | ToolBox | OxyTank |
 |----------------|--------|------|---------|----------|---------|---------|
@@ -62,11 +62,11 @@ We went through several iterations to find the most optimal configuration for bo
 | `train7`       | 50     | m    | 86.68   | 76.07    | 81.34   | 76.18   |
 | `train_5epochs`| 5      | s    | 71.79   | 62.77    | 60.51   | 48.96   |
 
-📌 Based on overall performance and generalization, **`train5` (YOLOv8s – 40 Epochs)** was selected as the **final model**.
+ Based on overall performance and generalization, **`train5` (YOLOv8s – 40 Epochs)** was selected as the **final model**.
 
 ---
 
-## 📊 Final Evaluation Metrics
+##  Final Evaluation Metrics
 
 Tested on 400 unseen images:
 
@@ -82,7 +82,7 @@ Tested on 400 unseen images:
 
 ---
 
-## 📈 Class-Wise Performance
+##  Class-Wise Performance
 
 | Class             | Precision (P) | Recall (R) | mAP\@0.5 | mAP\@0.5:0.95 |
 | ----------------- | ------------- | ---------- | -------- | ------------- |
@@ -91,12 +91,12 @@ Tested on 400 unseen images:
 | Oxygen Tank       | 94.1%         | 77.7%      | 87.1%    | 77.1%         |
 
 
-- 🔍 Confusion Matrix showed minor confusion with background (typical for cluttered space scenes)  
-- 📈 F1-Confidence Curve peaked at confidence ≈ **0.598** (recommended threshold)
+-  Confusion Matrix showed minor confusion with background (typical for cluttered space scenes)  
+-  F1-Confidence Curve peaked at confidence ≈ **0.598** (recommended threshold)
 
 ---
 
-## 🔍 Dataset Summary
+##  Dataset Summary
 
 - Structured in YOLO format (`.txt` labels)  
 - Verified 100% consistency between images and labels  
@@ -104,7 +104,7 @@ Tested on 400 unseen images:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **YOLOv8** (Ultralytics)  
 - **Python**  
@@ -115,19 +115,19 @@ Tested on 400 unseen images:
 
 ---
 
-## ▶️ How to Run the Project
+##  How to Run the Project
 
-### 🌐 Run Streamlit App
+###  Run Streamlit App
 
 bash
 streamlit run app.py
 
-### 🖼️ Run Tkinter GUI
+###  Run Tkinter GUI
 cd tkinter
 python app.py
 
 ---
-# 📷 Screenshots
+#  Screenshots
 This section contains all the screenshots and visual outputs of our application
 
 
