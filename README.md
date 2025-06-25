@@ -56,7 +56,7 @@ We went through several iterations to find the most optimal configuration for bo
 
 | Model          | Epochs | Type | Overall | FireExt. | ToolBox | OxyTank |
 |----------------|--------|------|---------|----------|---------|---------|
-| `train5`       | 40     | s    | 87.9    | 76.7     | 80.43   | 77.12   |
+| `train5`       | 40     | s    | 87.9    | 88.9     | 87.7   | 87.1   |
 | `train4`       | ?      | s    | 86.75   | 75.51    | 81.24   | 76.03   |
 | `train10`      | 50     | s    | 86.68   | 76.07    | 81.34   | 76.18   |
 | `train7`       | 50     | m    | 86.68   | 76.07    | 81.34   | 76.18   |
