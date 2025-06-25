@@ -56,7 +56,7 @@ We went through several iterations to find the most optimal configuration for bo
 
 | Model          | Epochs | Type | Overall | FireExt. | ToolBox | OxyTank |
 |----------------|--------|------|---------|----------|---------|---------|
-| `train5`       | 40     | s    | 87.9    | 88.9     | 87.7   | 87.1   |
+| `train5`       | 40     | s    | 87.9    | 88.9     | 87.7    | 87.1    |
 | `train4`       | ?      | s    | 86.75   | 75.51    | 81.24   | 76.03   |
 | `train10`      | 50     | s    | 86.68   | 76.07    | 81.34   | 76.18   |
 | `train7`       | 50     | m    | 86.68   | 76.07    | 81.34   | 76.18   |
@@ -134,6 +134,3 @@ This section contains all the screenshots and visual outputs of our application
 ![image](https://github.com/user-attachments/assets/aa0109b1-6752-427b-a565-392da22e1b23)
 ![image](https://github.com/user-attachments/assets/8827521f-adc5-4a7c-abc5-0b56f6b08c28)
 ![image](https://github.com/user-attachments/assets/f5ad1346-9a35-4c74-85b6-41d4226a9173)
-
-
-
